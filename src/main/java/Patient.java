@@ -36,7 +36,7 @@ public class Patient {
 
     @Override
     public String toString() {
-        return "[Patient: " + name + ", bloodLevel: " + bloodLevel + ", healthLevel: " + healthLevel + "]";
+        return "[Patient: " + name + " | Blood Level: " + bloodLevel + " | Health Level: " + healthLevel + "]";
     }
 }
 

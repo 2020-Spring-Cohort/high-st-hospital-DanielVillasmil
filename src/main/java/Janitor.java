@@ -6,8 +6,8 @@ public class Janitor extends Employee {
 
     private boolean sweeping;
 
-    public Janitor(String name, int id, int salary) {
-        super(name, id, salary);
+    public Janitor(String name, int id, int salary, boolean Paid) {
+        super(name, id, salary, Paid);
         this.sweeping = false;
 
     }
@@ -23,6 +23,6 @@ public class Janitor extends Employee {
 
     @Override
     public String toString() {
-        return "[Janitor: " + getName() + ", ID: " + getId() + ", Salary: " + getSalary() + ", Sweeping: " + sweeping + "]";
+        return "[Janitor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Sweeping: " + sweeping +  " | Paid: " + getPaid() + "]";
     }
 }

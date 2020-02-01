@@ -5,7 +5,7 @@ public class Employee {
     protected int salary;
     private boolean isPaid = false;
 
-    public Employee(String name, int id, int salary) {
+    public Employee(String name, int id, int salary, boolean Paid) {
         this.name = name;
         this.id = id;
         this.salary = salary;

@@ -6,8 +6,8 @@ public class Doctor extends Employee implements MedicalStaff {
 
     private String specialty;
 
-    public Doctor(String name, int id, int salary, String specialty) {
-        super(name, id, salary);
+    public Doctor(String name, int id, int salary, String specialty, boolean Paid) {
+        super(name, id, salary, Paid);
         this.specialty = specialty;
     }
 
@@ -28,7 +28,7 @@ public class Doctor extends Employee implements MedicalStaff {
 
     @Override
     public String toString() {
-        return "[Doctor: " + getName() + ", ID: " + getId() + ", Salary: " + getSalary() + ", Specialty: (" + getSpecialty() + ")]";
+        return "[Doctor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Specialty: (" + getSpecialty() + ")" +  " | Paid: " + getPaid() + "]";
     }
 }
 

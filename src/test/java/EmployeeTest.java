@@ -47,7 +47,7 @@ public class EmployeeTest {
 
     @Test
     public void doctorShouldHaveSpecialty() {
-        Doctor specialty = new Doctor("Mack", 101, 0, "Foot");
+        Doctor specialty = new Doctor("Mack", 101, 0, "Foot", false);
         String result = specialty.getSpecialty();
         assertEquals("Foot", result);
     }
@@ -98,7 +98,7 @@ public class EmployeeTest {
 
     @Test
     public void medicalStaffShouldDrawBlood() {
-        Doctor doctor = new Doctor("Mack", 101, 90000, "Foot");
+        Doctor doctor = new Doctor("Mack", 101, 90000, "Foot", false);
         Patient patient = new Patient("", 20, 10);
         doctor.drawBlood(patient);
         assertEquals(17, patient.getBloodLevel());
@@ -106,7 +106,7 @@ public class EmployeeTest {
 
     @Test
     public void medicalStaffShouldTreatPatient() {
-        Doctor doctor = new Doctor("Mack", 101, 90000, "Foot");
+        Doctor doctor = new Doctor("Mack", 101, 90000, "Foot", false);
         Patient patient = new Patient("", 20, 10);
         doctor.treatPatient(patient);
         assertEquals(15, patient.getHealthLevel());

@@ -4,8 +4,8 @@
 
 public class Nurse extends Employee implements MedicalStaff {
 
-    public Nurse(String name, int id, int salary) {
-        super(name, id, salary);
+    public Nurse(String name, int id, int salary, boolean Paid) {
+        super(name, id, salary, Paid);
 
     }
     @Override
@@ -20,7 +20,7 @@ public class Nurse extends Employee implements MedicalStaff {
     }
     @Override
     public String toString() {
-        return "[Nurse: " + getName() + ", ID :" + getId() + ", Salary: " + getSalary() + "]";
+        return "[Nurse: " + getName() + " | ID :" + getId() + " | Salary: " + getSalary() +  " | Paid: " + getPaid() + "]";
     }
 }
 

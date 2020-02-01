@@ -4,8 +4,8 @@
 
 public class Receptionist extends Employee {
 
-    public Receptionist(String name, int id, int salary) {
-        super(name, id, salary);
+    public Receptionist(String name, int id, int salary, boolean Paid) {
+        super(name, id, salary, Paid);
         this.answeringPhone = false;
 
     }
@@ -23,6 +23,6 @@ public class Receptionist extends Employee {
 
     @Override
     public String toString() {
-        return "[Receptionist: " + getName() + ", ID: " + getId() + ", Salary: " + getSalary() + ", On the phone: " + isAnsweringPhone() + "]";
+        return "[Receptionist: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | On the phone: " + isAnsweringPhone() +  " | Paid: " + getPaid() + "]";
     }
 }
