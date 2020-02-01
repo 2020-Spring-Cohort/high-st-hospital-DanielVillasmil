@@ -1,13 +1,11 @@
-import java.util.Scanner;
-
 public class Employee {
 
     private String name;
-    private int id;
-    private int salary;
-    Scanner scanner = new Scanner(System.in);
+    protected int id;
+    protected int salary;
+    private boolean isPaid = false;
 
-    public Employee(String name, int id, int salary){
+    public Employee(String name, int id, int salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
@@ -16,18 +14,20 @@ public class Employee {
     public String getName() {
         return name;
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-    public int getSalary(){
+
+    public int getSalary() {
         return salary;
     }
 
     public boolean getPaid() {
-
-        return false;
+        return isPaid;
     }
 
-    public void receivePay() {
+    public boolean receivePay() {
+        return isPaid = true;
     }
 }

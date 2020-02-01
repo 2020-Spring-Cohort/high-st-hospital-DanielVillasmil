@@ -2,19 +2,36 @@
 //extends employee
 //Can draw blood and care for patient
 
-public class Doctor<specialty> extends Employee implements specialty {
+public class Doctor extends Employee implements MedicalStaff {
 
+    private String specialty;
 
     public Doctor(String name, int id, int salary, String specialty) {
-        super("Mack", 101, 90000, "familu");
+        super(name, id, salary);
+        this.specialty = specialty;
     }
 
-    @Override{
-        public void specialty(String){
-            Doctor + specialty;
-        }
-
+    public String getSpecialty() {
+        return specialty;
     }
+
+    @Override
     public void drawBlood(Patient patient) {
+        patient.drawBlood(3);
+
+    }
+
+    @Override
+    public void treatPatient(Patient patient) {
+        patient.treatPatient(5);
+    }
+
+    @Override
+    public String toString() {
+        return "[Doctor: " + getName() + ", ID: " + getId() + ", Salary: " + getSalary() + ", Specialty: (" + getSpecialty() + ")]";
     }
 }
+
+
+
+

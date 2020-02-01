@@ -2,12 +2,25 @@
 //extends employee
 //Can draw blood and care for patient
 
-public class Nurse extends Employee{
+public class Nurse extends Employee implements MedicalStaff {
 
-    public Nurse(String name, int salary){
-        super(name, 201, 50000);
+    public Nurse(String name, int id, int salary) {
+        super(name, id, salary);
+
     }
-    public void drawBlood(Patient patient){
+    @Override
+    public void drawBlood(Patient patient) {
+        patient.drawBlood(3);
 
+    }
+
+    @Override
+    public void treatPatient(Patient patient) {
+        patient.treatPatient(5);
+    }
+    @Override
+    public String toString() {
+        return "[Nurse: " + getName() + ", ID :" + getId() + ", Salary: " + getSalary() + "]";
     }
 }
+
