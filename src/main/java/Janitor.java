@@ -23,6 +23,6 @@ public class Janitor extends Employee {
 
     @Override
     public String toString() {
-        return "[Janitor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Sweeping: " + sweeping +  " | Paid: " + getPaid() + "]";
+        return "[Janitor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Sweeping: " + sweeping + " | Paid: " + getPaid() + "]";
     }
 }

@@ -14,16 +14,16 @@ public class HospitalApplication {
 
 
     public static void main(String[] args) {
-        System.out.println(ANSI_PURPLE +"              +----------------------------------------+"+ ANSI_RESET);
+        System.out.println(ANSI_PURPLE + "              +----------------------------------------+" + ANSI_RESET);
         System.out.println(ANSI_PURPLE + "              |    Welcome to the High St. Hospital    |" + ANSI_RESET);
         System.out.println(ANSI_PURPLE + "              |             HOSPITAL STAFF             |" + ANSI_RESET);
-        System.out.println(ANSI_PURPLE +"              +--------------------------------------- +"+ ANSI_RESET + "\n");
+        System.out.println(ANSI_PURPLE + "              +--------------------------------------- +" + ANSI_RESET + "\n");
         medicalStaffStatus();
         System.out.println(ANSI_YELLOW + "               +----------------------------------------+" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "               |               PATIENTS                 |" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "               +----------------------------------------+" + ANSI_RESET);
         patientStatus();
-        System.out.println("Oh no!! Bob has coronavirus!! Call Doctor Mack!"+ "\n");
+        System.out.println("Oh no!! Bob has coronavirus!! Call Doctor Mack!" + "\n");
         System.out.println(ANSI_GREEN + "               ***Bob is taken to containment***" + ANSI_RESET);
         getBloodTaken(nurse, patient);
 
@@ -36,7 +36,7 @@ public class HospitalApplication {
         patientStatusGood();
 
 
-        System.out.println("Good job! all of you contributed to the cure of coronavirus! Here is your pay."+ "\n");
+        System.out.println("Good job! all of you contributed to the cure of coronavirus! Here is your pay." + "\n");
 
         medicalStaffPaid();
 
@@ -48,33 +48,33 @@ public class HospitalApplication {
 
     public static void increaseHealth(Employee name, Patient patientName) {
         System.out.println("Doctor Mack is treating Bob with vaccine." + "\n");
-        ((Doctor)name).treatPatient(patientName);
+        ((Doctor) name).treatPatient(patientName);
     }
 
 
     public static void getBloodTaken(Employee name, Patient patientName) {
         System.out.println("Nurse Jess is drawing blood from Bob for research." + "\n");
-        ((Nurse)name).drawBlood(patientName);
+        ((Nurse) name).drawBlood(patientName);
     }
+
     public static void increaseBlood(Employee name, Patient patientName) {
         System.out.println("Bob has gain some blood.");
         patientStatus();
     }
 
 
-
     public static void patientStatus() {
-        System.out.println(ANSI_YELLOW + patient + ANSI_RESET+ "\n");
+        System.out.println(ANSI_YELLOW + patient + ANSI_RESET + "\n");
 
     }
 
     public static void patientStatusSick() {
-        System.out.println(ANSI_YELLOW + patient + ANSI_RESET+ "\n");
+        System.out.println(ANSI_YELLOW + patient + ANSI_RESET + "\n");
 
     }
 
     public static void patientStatusGood() {
-        System.out.println(ANSI_YELLOW + patient + ANSI_RESET+ "\n");
+        System.out.println(ANSI_YELLOW + patient + ANSI_RESET + "\n");
     }
 
 
@@ -99,7 +99,7 @@ public class HospitalApplication {
         receptionist.receivePay();
         System.out.println(ANSI_BLUE + receptionist + ANSI_RESET);
 
-        Employee janitor = new Janitor("Juan", 401, 40000, true,true);
+        Employee janitor = new Janitor("Juan", 401, 40000, true, true);
         janitor.receivePay();
         System.out.println(ANSI_CYAN + janitor + ANSI_RESET);
     }
@@ -115,10 +115,10 @@ public class HospitalApplication {
         Nurse nurse = new Nurse("Jess", 201, 50000, false);
         System.out.println(ANSI_RED + nurse + ANSI_RESET);
 
-        Employee receptionist = new Receptionist("Pam", 301, 450000, true,false);
+        Employee receptionist = new Receptionist("Pam", 301, 450000, true, false);
         System.out.println(ANSI_BLUE + receptionist + ANSI_RESET);
 
-        Employee janitor = new Janitor("Juan", 401, 40000, true,false);
+        Employee janitor = new Janitor("Juan", 401, 40000, true, false);
         System.out.println(ANSI_CYAN + janitor + ANSI_RESET);
     }
 

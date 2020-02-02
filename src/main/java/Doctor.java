@@ -29,7 +29,7 @@ public class Doctor extends Employee implements MedicalStaff {
 
     @Override
     public String toString() {
-        return "[Doctor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Specialty: (" + getSpecialty() + ")" +  " | Paid: " + getPaid() + "]";
+        return "[Doctor: " + getName() + " | ID: " + getId() + " | Salary: " + getSalary() + " | Specialty: (" + getSpecialty() + ")" + " | Paid: " + getPaid() + "]";
     }
 }
 

@@ -74,7 +74,7 @@ public class EmployeeTest {
 
     @Test
     public void receptionistIsNotOnThePhone() {
-        Receptionist underTest = new Receptionist("", 301, 450000,false, true);
+        Receptionist underTest = new Receptionist("", 301, 450000, false, true);
         boolean isAnsweringPhone = underTest.isAnsweringPhone();
         assertFalse(isAnsweringPhone);
     }
@@ -108,18 +108,22 @@ public class EmployeeTest {
         Patient patient = new Patient("", 20, 10);
         String result = patient.getName();
         assertEquals("", result);
-    }@Test
-    public void patientShouldHaveHealth10(){
+    }
+
+    @Test
+    public void patientShouldHaveHealth10() {
         Patient patient = new Patient("", 20, 10);
         int result = patient.getHealthLevel();
         assertEquals(10, result);
     }
+
     @Test
-    public void patientShouldHaveBlood20(){
+    public void patientShouldHaveBlood20() {
         Patient patient = new Patient("", 20, 10);
         int result = patient.getBloodLevel();
         assertEquals(20, result);
     }
+
     @Test
     public void tickShouldDecreaseHealth() {
         Patient patient = new Patient("", 20, 10);

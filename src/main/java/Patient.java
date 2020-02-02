@@ -35,16 +35,10 @@ public class Patient {
     }
 
     public void gainHealth() {
-            healthLevel ++;
-            if(healthLevel >= 10);
-            this.healthLevel = 10;
+        healthLevel++;
+        if (healthLevel >= 10) ;
+        this.healthLevel = 10;
     }
-    public void gainBlood(){
-        bloodLevel += 5;
-        if(bloodLevel >= 20);
-        this.bloodLevel = 20;
-    }
-
 
 
     @Override
