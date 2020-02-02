@@ -4,14 +4,18 @@
 
 
 public class Patient {
-    private int bloodLevel = 20;
-    private int healthLevel = 10;
-    private String name;
+    protected int bloodLevel = 20;
+    protected int healthLevel = 10;
+    protected String name;
 
     public Patient(String name, int bloodLevel, int healthLevel) {
         this.name = name;
         this.bloodLevel = bloodLevel;
         this.healthLevel = healthLevel;
+    }
+
+    public void tick() {
+        healthLevel--;
     }
 
     public String getName() {
@@ -26,13 +30,22 @@ public class Patient {
         return healthLevel;
     }
 
-    public void drawBlood(int amountDrawn) {
+    public void giveBlood(int amountDrawn) {
         bloodLevel -= amountDrawn;
     }
 
-    public void treatPatient(int increasedHealth) {
-        healthLevel += increasedHealth;
+    public void gainHealth() {
+            healthLevel ++;
+            if(healthLevel >= 10);
+            this.healthLevel = 10;
     }
+    public void gainBlood(){
+        bloodLevel += 5;
+        if(bloodLevel >= 20);
+        this.bloodLevel = 20;
+    }
+
+
 
     @Override
     public String toString() {

@@ -6,9 +6,9 @@ public class Janitor extends Employee {
 
     private boolean sweeping;
 
-    public Janitor(String name, int id, int salary, boolean Paid) {
+    public Janitor(String name, int id, int salary, boolean Sweeping, boolean Paid) {
         super(name, id, salary, Paid);
-        this.sweeping = false;
+        this.sweeping = Sweeping;
 
     }
 

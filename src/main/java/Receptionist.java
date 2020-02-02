@@ -4,9 +4,9 @@
 
 public class Receptionist extends Employee {
 
-    public Receptionist(String name, int id, int salary, boolean Paid) {
+    public Receptionist(String name, int id, int salary,boolean onPhone, boolean Paid) {
         super(name, id, salary, Paid);
-        this.answeringPhone = false;
+        this.answeringPhone = onPhone;
 
     }
 

@@ -10,13 +10,13 @@ public class Nurse extends Employee implements MedicalStaff {
     }
     @Override
     public void drawBlood(Patient patient) {
-        patient.drawBlood(3);
+        patient.giveBlood(3);
 
     }
 
     @Override
     public void treatPatient(Patient patient) {
-        patient.treatPatient(5);
+        patient.gainHealth();
     }
     @Override
     public String toString() {

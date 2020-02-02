@@ -4,5 +4,6 @@ public interface MedicalStaff {
 
     void treatPatient(Patient patient);
 
+
 }
 
